@@ -6,7 +6,7 @@
     <parameter name="robot_ip_address" value="172.0.0.1" type="string"/>
     <parameter name="robot_description" value="/home/ros/" type="string"/>
     <parameter name="robot_port" value="4242"/>
-    <actionserver name="follow_joint_trajectory_action" ActionType="control_msgs::FollowJointTrajectory"/>
+    <actionserver name="/arm_controller/follow_joint_trajectory_action" ActionType="control_msgs::FollowJointTrajectory"/>
   </node>
   <depend>sensor_msgs</depend>
   <depend>control_msgs</depend>

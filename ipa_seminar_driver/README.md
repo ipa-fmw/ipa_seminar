@@ -221,6 +221,8 @@ Afterwards connect the action server and the action client and name the connecti
 
 ![system_model](./doc/system_model.png "System model")
 
+Finally, edit the package settings by clicking on the white area of the drawing pane and give the system model the name kr16_deployment
+
 #### 6.2  Generating launch files and the manifest
 
 After finishing the system configuration you can generate the manifest and launch file for the system package. You can do that in the BRIDE menu in ROS->"Generate Launch file for ros system". After refreshing your project explorer by right clicking the kr16_deployment package and pressing "Refresh" you should now see a "manifest.xml" that includes all dependencies and an "system.launch" file that configures and connects all nodes in the system. 

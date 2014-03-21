@@ -86,7 +86,7 @@
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_gOKnULEEEeOzMqfauE_9bg" type="4003" source="_zjGx1bD7EeOzMqfauE_9bg" target="_9QZ9lLD7EeOzMqfauE_9bg">
     <children xmi:type="notation:DecorationNode" xmi:id="_gOKnVLEEEeOzMqfauE_9bg" type="6003">
-      <layoutConstraint xmi:type="notation:Location" xmi:id="_gOKnVbEEEeOzMqfauE_9bg" y="40"/>
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_gOKnVbEEEeOzMqfauE_9bg" x="15" y="-48"/>
     </children>
     <styles xmi:type="notation:RoutingStyle" xmi:id="_gOKnUbEEEeOzMqfauE_9bg"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_gOKnUrEEEeOzMqfauE_9bg" fontName="Ubuntu"/>
