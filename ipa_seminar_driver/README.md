@@ -215,9 +215,22 @@ To add capability models to your system you select the Package tool on the right
 
 #### 6.2  Connecting actions, services and topics
 
-In the system diagram you can now use the topic tool in the pallet to connect the Publishers with the corresponding Subscribers and name the topic. Similar you can connect the services and actions in the system. In this example we connect the "state" Publisher port of the kr16_driver with the "state" subscriber port of the kr16_test_client node. We name the topic "/communication". Afterwards we connect the actions to each other and name the action TriggerAction.
+In the system diagram you can now use the topic tool in the pallet to connect the Publishers with the corresponding Subscribers and name the topic. Similar you can connect the services and actions in the system. In this example we connect the "state" Publisher port of the kr16_driver with the "state" subscriber port of the kr16_test_client node. We name the topic "/arm_controller/state". From now on the topic will be show up in ROS under this name (e.g. when using "rostopic list" command).
 
-ate
+Afterwards connect the action server and the action client and name the connection /arm_controller/follow_joint_trajectory_action. Your model should then look similar to this picture:
 
+![system_model](./doc/system_model.png "System model")
+
+#### 6.2  Generating launch files and the manifest
+
+After finishing the system configuration you can generate the manifest and launch file for the system package. You can do that in the BRIDE menu in ROS->"Generate Launch file for ros system". After refreshing your project explorer by right clicking the kr16_deployment package and pressing "Refresh" you should now see a "manifest.xml" that includes all dependencies and an "system.launch" file that configures and connects all nodes in the system. 
+
+#### 6.3  Testing the system
+
+When you open a new terminal you should be able to run
+```
+roslaunch deployment system.launch 
+```
+With the standard ros tools (e.g. rostopic, rxgraph, etc.) you should now be able to investigate your system. If so, you are ready to move on to the real robot!
 
 
