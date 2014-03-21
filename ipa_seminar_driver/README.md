@@ -59,7 +59,7 @@ With the palette on the right you can now add a "Node" to the graphical plane by
 
 ![create_a_node](./doc/create_a_node.png "Creating a node")
 
-Following the [ROS-I driver specs](http://wiki.ros.org/Industrial/Industrial_Robot_Driver_Spec), add a Publisher called "joint_states" and an ActionServer called "joint_trajectory_action" by selecting the corresponding type on the right pane and clicking on the corner of the graphical node representation. You should then see the following screen: 
+Following the [ROS-I driver specs](http://wiki.ros.org/Industrial/Industrial_Robot_Driver_Spec), add a Publisher called "joint_states" and "states" and an ActionServer called "joint_trajectory_action" by selecting the corresponding type on the right pane and clicking on the corner of the graphical node representation. You should then see the following screen: 
 
 ![create_action_pub](./doc/create_action_pub.png "Creating a publisher and action")
 
@@ -215,7 +215,9 @@ To add capability models to your system you select the Package tool on the right
 
 #### 6.2  Connecting actions, services and topics
 
+In the system diagram you can now use the topic tool in the pallet to connect the Publishers with the corresponding Subscribers and name the topic. Similar you can connect the services and actions in the system. In this example we connect the "state" Publisher port of the kr16_driver with the "state" subscriber port of the kr16_test_client node. We name the topic "/communication". Afterwards we connect the actions to each other and name the action TriggerAction.
 
+ate
 
 
 
