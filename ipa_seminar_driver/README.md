@@ -1,7 +1,7 @@
 # ROS driver programming using BRIDE
 ## Tutorial
 
-The goal of this tutorial is to create a ROS driver for the KUKA KR16 robot using the BRIDE tool-chain for model-driven engineering. Basic information and details about Bride are available [here](http://wiki.ros.org/bride). The tutorial begins with a short introduction on how to setup the BRIDE IDE and moves on to the creation of two node models: One node model which is wrapping the kr16 robot driver and another node which will trigger the kr16 driver to continuously move the robot from one waypoint to another.
+The goal of this tutorial is to create a ROS driver for the KUKA KR16 robot using the BRIDE tool-chain for model-driven engineering. Basic information and details about Bride are available [here](http://wiki.ros.org/bride). The tutorial begins with a short introduction on how to setup the BRIDE IDE and moves on to the creation of two node models: One node model which is wrapping the kr16 robot driver and another node which will trigger the kr16 driver to continuously move the robot from one waypoint to another.w
 
 ### 1.  Startup BRIDE and create a new project
 
@@ -96,7 +96,7 @@ You can now generate the source code of the node automatically based on the mode
 
 To implement the actual capability code for your ROS driver you have to only focus on the kr16_node_common.cpp file in the common/src/ directory. You can open the file by double clicking it in the project explorer. The file contains protected regions you can use for your code that will not be overwritten once you regenerate the node by the tool chain.
 
-Once the file is open you can now go to the kr16_node_impl class and edit the code as follows. Please be aware, that it is only save to edit the locations in between the user comments. All other edits will be overwritte by the next model generation process. At first we need to add the driver specific includes:
+Once the file is open you can now go to the kr16_node_impl class and edit the code as follows. Please be aware, that it is only save to edit the locations in between the user comments. All other edits will be overwritten by the next model generation process. At first we need to add the driver specific includes:
 
 ```
 //ROS typedefs
@@ -213,7 +213,7 @@ public:
 					overall_velocity);
 		}
 
-		// waiti until execution of the action has finished
+		// wait until execution of the action has finished
 		while (!msg_queue.empty() && ros::ok() && !as_->isPreemptRequested())
 		{
 			if(kuka_callback_received_)
